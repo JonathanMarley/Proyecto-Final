@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,600&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --black:#192a56;
+  --white:#ffffff;
+  --light-color: #665;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: rgb(106, 186, 252);
+}
+
+
+header .logo{
+  color: rgb(255, 255, 255);
+  font-size: 1.9rem;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+header .logo i{
+  color: rgb(255, 255, 255);
+}
+
+
+.navbar ul{
+  list-style: none;
+}
+
+header .navbar ul li{
+  float: left;
+  position: relative;
+}
+
+header .navbar ul li a{ 
+  font-size: 17px;
+  color: var(--white);
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+
+header .navbar ul li ul li a{ 
+  font-size: 17px;
+  color: #000000;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+header .navbar ul li a:hover{
+  background-color: rgba(134, 134, 134, 0.4);
+}
+
+header .navbar ul li ul{
+  position: absolute;
+  width: 300px;
+  background-color: rgba(255, 255, 255);
+  display: none;
+}
+
+header .fa-bars:hover{
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+header .navbar ul li ul li a{
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+header .navbar ul li ul li ul{
+  position: absolute;
+  top: 0;
+  right: 230px;
+}
+
+header .navbar ul li ul li{
+  width: 100%;
+}
+
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+
+#toggle,
+header label{
+  display: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.hotel{
+  width: 45px;
+  height: 35px;
+}
+
+
+header .icons a{
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--black);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+header .icons :hover{
+  color: var(--white);
+  background-color: rgba(247, 249, 247, 0.1);
+  transform: scale(1.2);
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+@media (max-width:1250px){
+  header label{
+    display: initial;
+  }
+
+  header{
+    padding: 20px 10%;
+  }
+
+  header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  header .navbar ul li{
+    width: 100%;
+  }
+
+  header .navbar ul li a{
+    padding: 8px 30px 8px 10%;
+  }
+
+  header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  header .navbar ul li ul li{
+    background-color: rgba(81, 81, 81, 0.1);
+  }
+
+  header .navbar ul li ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  #toggle:checked ~ .navbar{
+    display: block;
+  }
+
+}
+
+.home .bienvenida{
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home .bienvenida .intro {
+  text-align: center;
+}
+
+.home .bienvenida .intro h1 {
+  font-size: 100px;
+}
+
+.home .bienvenida .intro h2 {
+  margin-top: -40px;
+  font-size: 24px;
+}
+
+section{
+  padding: 4rem 9%;
+}
+
+
+.home .home-slider .slide{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 10rem;
+}
+
+
+
+.home .home-slider .slide .content{
+  flex: 1 1 35rem;
+}
+
+.home .home-slider .slide .imagen img{
+  width: 100%;
+}
+
+.home .home-slider .slide .content span{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.home .home-slider .slide .content h3{
+  font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content p{
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 950px) {
+  .home .bienvenida .intro h1 {
+    font-size: 2rem;
+    margin-top: -9rem;
+  }
+  
+  .home .bienvenida .intro h2 {
+    margin-top: -1.6rem;
+    font-size: 1.6rem;
+  }
+
+  .video{
+    width: 14rem;
+  }
+
+  .home .home-slider .slide .content{
+    margin-top: -15rem;
+  }
+
+  .home .home-slider .slide .imagen img{
+    margin-top: -3rem ;
+    margin-bottom: 6rem;
+  }
+
+}
+
+.footerclass .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  gap: 0.5rem;
+}
+
+.footerclass .box-container h3{
+  padding: 5rem 0;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: -60px;
+}
+
+.footerclass .box-container .box a{
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.footerclass .box-container .box a:hover{
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footerclass .creditos{
+  text-align: center;
+  border-top: 0.2rem solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: white;
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.footerclass .creditos span{
+  color: var(--white);
+}
+
+.table{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+
+.imgfb {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.imgfb:hover {
+  filter: none;
+}
+
+.imgig {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.imgig:hover {
+  filter: none;
+}
+
+.imgtw {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.imgtw:hover {
+  filter: none;
+}
+
+/*--------------Imagenes------------*/
+.principal img {
+  margin-top: 100px;
+  display: block;
+  width: 100%;
+  margin: auto;
+  border-top: solid white;
+  border-bottom: solid white;
+}
+
+/*------------------------Acerca De nosotros hijos------------------*/
+.beneficioHonstiger {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  color: rgb(75, 73, 73);
+  flex: 1 400px;
+
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: rgb(77, 76, 76);
+  font-size: 40px;
+}
+
+
+
+
+h2 b {
+  color: rgb(107, 106, 106);
+}
+
+.imgbeneficiohostinger {
+  max-width: 99%;
+  border-radius: 2%;
+}
+
+.imgbeneficiohostinger:hover {
+  box-shadow: 0px 0px 5px 5px #5eecff;
+}
+
+/*Acerca De nosotros hijos*/
+.beneficioHonstigerhijo {
+  width: calc((90%-40px)/2);
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: black;
+  flex: 1 400px;
+  border-bottom: solid white;
+
+}
+
+/*--------------Camisas---------------*/
+
+.camisasPrincipal{
+  max-width: 1200px;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* oculto lo que queda fuera del .contenedor */
+  contain: paint;
+  color: rgb(27, 26, 26);
+  
+  
+}
+
+.camisasPrincipal .subcamisas{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap:30px;
+  grid-row-gap: 30px;
+  /* width: 60%; */
+  width: 100%;
+  transition: .3s;
+  color: rgb(15, 14, 14);
+  
+}
+
+.camisasPrincipal .subcamisas .submenucamisas{
+  max-width: 220px;
+  margin: auto;
+  border: 1px solid rgb(34, 33, 33);
+  border-radius: 10px;
+  padding: 20px;
+  transition: .3s;
+  background-color: rgb(246, 246, 247);
+}
+.camisasPrincipal .subcamisas .submenucamisas .imagencamisas{
+  width: 100%;
+}
+.camisasPrincipal .subcamisas .submenucamisas:hover{
+  box-shadow: 0 0 10px #b0e8f7;
+  scale: 1.05;
+  background-color: rgb(207, 202, 202);
+}
+.camisasPrincipal .subcamisas .submenucamisas .titulocamisa{
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.camisasPrincipal .subcamisas .submenucamisas .preciocamisa{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+.camisasPrincipal .subcamisas .submenucamisas .boton{
+  display: block;
+  margin: 10px auto;
+  border: none;
+  background: rgb(106, 186, 252);
+  color: rgb(17, 13, 13);
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+ /* seccion carrito */
+ .carrito{
+  border: 1px solid #666;
+  width: 35%;
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: auto;
+  position: sticky !important;
+  top: 0;
+  transition: .3s;
+  /* Estilos para ocultar */
+  margin-right: -100%;
+  opacity: 0;
+}
+.carrito .header-carrito{
+  background-color: white;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+.carrito .carrito-item{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  position: relative;
+  border-bottom: 1px solid #666;
+  padding: 20px;
+}
+.carrito .carrito-item img{
+  margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad{
+  display: inline-block;
+  margin-right: 25px;
+}
+.carrito .carrito-item .carrito-item-cantidad{
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  display: inline-block;
+  width:30px;
+  padding: 5px;
+  text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i{
+      text-align: center;
+      font-size: 30px;
+      color: white;
+      background-color: black;
+      margin: 5px;
+      border-radius: 30%;
+      padding: 12px;
+      box-shadow: 0px 5px 10px rgb(0, 0, 0, .35);
+
+}
+
+.carrito .carrito-item .carrito-item-precio{
+  font-weight: bold;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.carrito .carrito-item .btn-eliminar{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+  display: block;
+  background: transparent;
+  z-index: 20;
+}
+.carrito .carrito-item .btn-eliminar i{
+  pointer-events: none;
+  color: white;
+}
+
+.carrito-total{
+  background-color: #f3f3f3;
+  padding: 30px;
+}
+.carrito-total .fila{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.carrito-total .btn-pagar{
+  display: block;
+  width: 100%;
+  border: none;
+  background-color:  rgb(187, 184, 184);
+  color: black;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+}
+.carrito-total .btn-pagar:hover{
+  scale: 1.05;
+  color: rgb(29, 54, 75);
+  color: white;
+}
+hr{
+      background-color: white;
+      color: white;
+}
+
+.icono{
+  font-size: 0.9rem;
+  color: rgb(29, 54, 75);
+  
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside{
+  flex: 30%;
+  padding: 20px;
+}
+.section{
+  flex: 70%;
+  padding: 20px;
+}
+
+.parrafo{
+  font-size: 14px;
+  color: #666565;
+}
+
+.span{
+  font-size: 14px;
+  color: #666565;
+}
+
+
+
+.background{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -10;
+}
+
+
+.services{
+  position: relative;
+  top: 400px;
+}
+
+.sleep{
+  width: 100%;
+  height: 400px;
+}
+
+.textleft{
+text-align: center;
+position: relative;
+top: 35%;
+left: 5%;
+width: 600px;
+}
+
+.imgright{
+
+  position: relative;
+  float: right;
+  right: 5%;
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  bottom: 10%;
+}
+
+.pool{
+  width: 100%;
+  height: 400px;
+}
+
+.textright{
+text-align: center;
+position: relative;
+top: 35%;
+left: 50%;
+width: 600px;
+}
+
+.imgleft{
+  position: relative;
+  float: left;
+  bottom: 10%;
+  left: 5%;
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.gym{
+  width: 100%;
+  height: 400px;
+}
+
+.textleft{
+text-align: center;
+position: relative;
+top: 35%;
+left: 5%;
+width: 600px;
+}
+
+.imgright{
+
+  position: relative;
+  float: right;
+  right: 5%;
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  bottom: 10%;
+}
+
+.eat{
+  width: 100%;
+  height: 400px;
+}
+
+.textright{
+text-align: center;
+position: relative;
+top: 35%;
+left: 50%;
+width: 600px;
+}
+
+.imgleft{
+  position: relative;
+  float: left;
+  bottom: 10%;
+  left: 5%;
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.services h1{
+  font-size: 40px;
+}
+
+.footer{
+  background: rgb(106, 186, 252);
+  bottom: -480px;
+  position: relative;
+  font-size: 2rem;
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  gap: 0.5rem;
+  padding: 1.5rem;
+  padding-top: 2.8rem;
+  margin-top: 1.5rem;
+}
+
+.footer .box-container h3{
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--white);
+}
+
+
+.footer .box-container .box a{
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.footer .box-container .box a:hover{
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer .creditos{
+  text-align: center;
+  border-top: 0.2rem solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: var(--white);
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer .creditos span{
+  color: var(--white);
+}
+
+.table .fa-facebook,
+.table  .fa-instagram,
+.table .fa-twitter{
+  font-size: 2.2rem;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover{
+  transform: scale(1.4);
+}

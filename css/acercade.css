@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,600&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --black:#192a56;
+  --white:#ffffff;
+  --light-color: #665;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: rgb(106, 186, 252);
+}
+
+
+header .logo{
+  color: rgb(255, 255, 255);
+  font-size: 1.9rem;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+header .logo i{
+  color: rgb(255, 255, 255);
+}
+
+
+.navbar ul{
+  list-style: none;
+}
+
+header .navbar ul li{
+  float: left;
+  position: relative;
+}
+
+header .navbar ul li a{ 
+  font-size: 17px;
+  color: var(--white);
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+
+header .navbar ul li ul li a{ 
+  font-size: 17px;
+  color: #000000;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+header .navbar ul li a:hover{
+  background-color: rgba(134, 134, 134, 0.4);
+}
+
+header .navbar ul li ul{
+  position: absolute;
+  width: 300px;
+  background-color: rgba(247, 249, 247, 0.1);
+  display: none;
+}
+
+header .fa-bars:hover{
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+header .navbar ul li ul li a{
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+header .navbar ul li ul li ul{
+  position: absolute;
+  top: 0;
+  right: 230px;
+}
+
+header .navbar ul li ul li{
+  width: 100%;
+}
+
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+
+#toggle,
+header label{
+  display: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.hotel{
+  width: 45px;
+  height: 35px;
+}
+
+
+header .icons a{
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--black);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+header .icons :hover{
+  color: var(--white);
+  background-color: rgba(247, 249, 247, 0.1);
+  transform: scale(1.2);
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+@media (max-width:1250px){
+  header label{
+    display: initial;
+  }
+
+  header{
+    padding: 20px 10%;
+  }
+
+  header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  header .navbar ul li{
+    width: 100%;
+  }
+
+  header .navbar ul li a{
+    padding: 8px 30px 8px 10%;
+  }
+
+  header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  header .navbar ul li ul li{
+    background-color: rgba(81, 81, 81, 0.1);
+  }
+
+  header .navbar ul li ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  #toggle:checked ~ .navbar{
+    display: block;
+  }
+
+
+}
+
+.home .bienvenida{
+  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--white);
+}
+
+.home .bienvenida .intro {
+  text-align: center;
+}
+
+.home .bienvenida .intro h1 {
+  font-size: 100px;
+}
+
+.home .bienvenida .intro h2 {
+  margin-top: -10px;
+  font-size: 24px;
+}
+
+.info .experiencia{
+  margin-top: 9rem;
+}
+
+@media screen and (max-width: 950px) {
+  .home .bienvenida .intro h1 {
+    font-size: 68px;
+  }
+  
+  .home .bienvenida .intro h2 {
+    margin-top: 2px;
+    font-size: 20px;
+  }
+
+  .info .hoteles{
+    display: block;
+    padding-left: 5rem;
+  }
+
+  .info .age{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: -6rem;
+    margin-bottom: 15rem;
+    text-align: center;
+  }
+
+  .info .age h1{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+  }
+
+  .info .age img{
+    margin-right: 5rem;
+  }
+
+}
+
+
+.footerclass .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  gap: 0.5rem;
+}
+
+.footerclass .box-container h3{
+  padding: 5rem 0;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: -60px;
+}
+
+.footerclass .box-container .box a{
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.footerclass .box-container .box a:hover{
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footerclass .creditos{
+  text-align: center;
+  border-top: 0.2rem solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: white;
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.footerclass .creditos span{
+  color: var(--white);
+}
+
+.table{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+
+.imgfb {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.imgfb:hover {
+  filter: none;
+}
+
+.imgig {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.imgig:hover {
+  filter: none;
+}
+
+.imgtw {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.imgtw:hover {
+  filter: none;
+}
+
+.banner{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120%;
+  z-index: -10;
+}
+
+.footer{
+  background: rgb(106, 186, 252);
+  bottom: -330px;
+  position: relative;
+  font-size: 2rem;
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  gap: 0.5rem;
+  padding: 1.5rem;
+  padding-top: 2.8rem;
+  margin-top: 1.5rem;
+}
+
+.footer .box-container h3{
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--white);
+}
+
+
+.footer .box-container .box a{
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.footer .box-container .box a:hover{
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer .creditos{
+  text-align: center;
+  border-top: 0.2rem solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: var(--white);
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer .creditos span{
+  color: var(--white);
+}
+
+.table .fa-facebook,
+.table  .fa-instagram,
+.table .fa-twitter{
+  font-size: 2.2rem;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover{
+  transform: scale(1.4);
+}
+
+.info{
+  position: relative;
+  top: 200px;
+}
+
+.experiencia{
+  width: 100%;
+  margin-top: 8%;
+}
+
+.experiencia h1{
+  text-align: center;
+  font-size: 40px;
+  margin: 50px;
+}
+
+.hoteles{
+display: flex;
+justify-content: center;
+z-index: 1;
+}
+
+.hotel{
+  width: 400px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.age{
+  position: relative;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.age h1{
+  margin-right:100px;
+  font-size: 50px;
+}
+
+.ageimg{
+  float: right;
+  width: 500px;
+  height: 350px;
+  border-radius: 5px;
+}

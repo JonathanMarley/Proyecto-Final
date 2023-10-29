@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,600&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --black:#192a56;
+  --white:#ffffff;
+  --light-color: #665;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+  
+  }
+
+  .fondo{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height:90rem;
+    }
+  
+  header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0px 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      background: rgb(106, 186, 252);
+  }
+  
+  
+  header .logo{
+    color: rgb(255, 255, 255);
+    font-size: 1.9rem;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  
+  header .logo i{
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  .navbar ul{
+    list-style: none;
+  }
+  
+  header .navbar ul li{
+    float: left;
+    position: relative;
+  }
+  
+  header .navbar ul li a{ 
+    font-size: 17px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all 0.2s ease;
+  }
+  
+  header .navbar ul li a:hover{
+    background-color: rgba(247, 249, 247, 0.1);
+  }
+  
+  header .navbar ul li ul{
+    position: absolute;
+    width: 300px;
+    background-color: rgba(247, 249, 247, 0.1);
+    display: none;
+  }
+  
+  header .navbar ul li ul li a{
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  
+  header .navbar ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 230px;
+  }
+  
+  header .navbar ul li ul li{
+    width: 100%;
+  }
+  
+  header .navbar ul li:hover > ul{
+    display: initial;
+  }
+  
+  #toggle,
+  header label{
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hotel{
+    width: 45px;
+    height: 35px;
+  }
+  
+
+header .icons a{
+    cursor: pointer;
+    margin-left: 0.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+header .icons :hover{
+    color: var(--white);
+    background: var(--black);
+    transform: scale(1.2);
+}
+
+
+@media (max-width:950px){
+  header label{
+    display: initial;
+  }
+
+  header{
+    padding: 20px 10%;
+  }
+
+  header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  header .navbar ul li{
+    width: 100%;
+  }
+
+  header .navbar ul li a{
+    padding: 8px 30px 8px 10%;
+  }
+
+  header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  header .navbar ul li ul li{
+    background-color: var(--black);
+  }
+
+  header .navbar ul li ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  #toggle:checked ~ .navbar{
+    display: block;
+  }
+
+
+}
+
+
+section{
+    padding: 4.5rem 7%;
+}
+
+.home .home-slider .slide{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 4rem;
+    color: black;
+}
+
+.home .home-slider .slide .content span{
+  font-size: 2rem;
+  color: #000000;
+}
+
+.home .home-slider .slide .content h6{
+  color: black;
+  font-size: 0.9rem;
+}
+
+
+.btn,
+.btn2{
+  margin-top: 0.4rem;
+  display: flex;
+  font-size: 1rem;
+  color: #000000;
+  background-color: rgba(107, 107, 107, 0.1);
+  border-radius: 0.7rem;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn2:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(0.8)
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+  }
+
+@media (max-width: 950px) {
+  td {
+      padding: 10px;
+  }
+}
+
+
+.PF .pregunta .text h1{
+  padding-top: 2rem;
+}
+
+.concepto-container{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding-top: 0.5rem;
+}
+
+.palabra{
+  font-size: 20px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.icono{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.concepto{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.19);
+  padding: 4px;
+  margin-top: 0.2px;
+  border-radius: 4px;
+}
+
+.concepto.visible{
+  display: block;
+  font-size: 5px;
+}
+
+.footer .box-container{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+    gap: 0.5rem;
+  }
+  
+  .footer .box-container h3{
+    padding: 5rem 0;
+    font-size: 1.4rem;
+    color: var(--white);
+  }
+  
+  .footer .box-container .box {
+    display: block;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+  
+  .footer .box-container .box a:hover{
+    color: var(--white);
+    text-decoration: underline;
+  }
+  
+  .footer .creditos{
+    text-align: center;
+    border-top: 0.2rem solid rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    color: black;
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .footer .creditos span{
+    color: black;
+  }
+
+  .table{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    color: black;
+  }
+
+  .table .text{
+    color: black;
+  }
+
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+
+p {
+  margin-top: 20px;
+  color: black;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Elevate Inn</title>
+  <link rel="stylesheet" href="css/atencion.css">
+
+   <link rel="shortcut icon" href="img/logo.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+    <img class="fondo" src="img/servicios/azul.jpg" alt="">
+
+    <header>
+      <a href="inicio.html" class="logo"><i class="fa-solid fa-chevron-left" style="color: #ffffff;"> Volver a Inicio</i></a>
+
+    </header>
+
+        <section class="home" id="home">
+            <div class="home-slider">
+                <div class="wrapper">
+                    <div class="slide">
+                        <div class="content">
+                            <h6>Pagina de ayuda</h6>
+                            <span>Te damos la Bienvenida a la Pgina de Atencion al Cliente </span>
+                            <h6>Inicia Sesion para contactar con Atencion al cliente, disponible las 24 horas del dia</h6>
+
+                            <section class="footer">
+                                <div class="box-container">
+                                    <div class="box">
+                                        <i class="fa-solid fa-comments" style="color: #000000;"> Envianos un mensaje</i>
+                                        <table class="table">
+                                          <p>
+                                            Ponte en contacto con nuestros agentes en relacion con esta reserva y te responderemos lo antes posible.
+                                          </p>
+                                      </table>
+                                    </div>
+                          
+                                    <div class="box">
+                                        <i class="fa-solid fa-phone" style="color: #000000;"> Llamanos</i>
+                                        <table class="table">
+                                          <p>
+                                            Si se trata de algo urgente, puedes llamarnos las 24 horas a un numero local o internacional.
+                                          </p>
+                                      </table>
+                                    </div>
+                                    <br>
+                                    <a href="#" class="btn">Iniciar Sesion</a>
+
+                                    <a href="#" class="btn2">Continuar sin iniciar Sesion</a>
+                                </div>
+                           </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="PF">
+            <div class="pregunta">
+              <div class="text">
+                <h1>Preguntas Frecuentes</h1>
+              </div>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="concepto-container">
+                            <span class="palabra">¿Qué formas de pago se aceptan?</span>
+                            <span class="icono" onclick="mostrarConcepto()">&#9432;</span>
+                            <div class="concepto" id="conceptoTexto">
+                                <p>
+                                    Las tarjetas de crédito son la forma de pago más extendida entre los alojamientos de Booking.com. 
+                                    La mayoría de ellos necesita la tarjeta para poder validar la reserva. En algunos casos, también 
+                                    se aceptan formas de pago alternativas como PayPal. Excepcionalmente en algunos lugares podrás 
+                                    reservar con tarjeta de débito. En la confirmación de la reserva verás las formas de pago que acepta 
+                                    tu alojamiento. Si quieres que te confirmen alguna, puedes llamar directamente al alojamiento.
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <script>
+                            function mostrarConcepto() {
+                                let concepto = document.getElementById('conceptoTexto');
+                                concepto.classList.toggle('visible');
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="concepto-container">
+                            <span class="palabra">¿Puedo anular mi reserva?</span>
+                            <span class="icono" onclick="mostrarConcepto()">&#9432;</span>
+                            <div class="concepto" id="conceptoTexto">
+                                <p>
+                                    Sí, el alojamiento es el encargado de determinar los cargos de cancelación, que podrás consultar en
+                                    tu reserva. Cualquier tipo de gasto adicional lo pagarás al alojamiento.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <script>
+                            function mostrarConcepto() {
+                                var concepto = document.getElementById('conceptoTexto');
+                                concepto.classList.toggle('visible');
+                            }
+                        </script>
+            
+                    </td>
+                </tr>
+            </table>
+
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="concepto-container">
+                            <span class="palabra">¿Cómo puedo recibir más información sobre la habitación o las instalaciones y servicios del alojamiento?</span>
+                            <span class="icono" onclick="mostrarConcepto()">&#9432;</span>
+                            <div class="concepto" id="conceptoTexto">
+                                <p>
+                                    En la confirmación de tu reserva encontrarás los datos sobre las instalaciones y servicios de tu alojamiento.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <script>
+                            function mostrarConcepto() {
+                                var concepto = document.getElementById('conceptoTexto');
+                                concepto.classList.toggle('visible');
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
+
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="concepto-container">
+                            <span class="palabra">¿Tendré que realizar el pago completo de los niños?</span>
+                            <span class="icono" onclick="mostrarConcepto()">&#9432;</span>
+                            <div class="concepto" id="conceptoTexto">
+                                <p>
+                                    Los cargos adicionales por niños, si aplican, no están incluidos en el precio de la reserva. 
+                                    Ponte en contacto con el alojamiento directamente para ver si debes realizar algún pago por los niños y cuándo.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <script>
+                            function mostrarConcepto() {
+                                var concepto = document.getElementById('conceptoTexto');
+                                concepto.classList.toggle('visible');
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="concepto-container">
+                            <span class="palabra">¿Cómo puedo pedir una factura?</span>
+                            <span class="icono" onclick="mostrarConcepto()">&#9432;</span>
+                            <div class="concepto" id="conceptoTexto">
+                                <p>
+                                    El alojamiento puede proporcionarte la factura de tu estancia, por lo que puedes ponerte en contacto con ellos directamente.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <script>
+                            function mostrarConcepto() {
+                                var concepto = document.getElementById('conceptoTexto');
+                                concepto.classList.toggle('visible');
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
+            
+            </div>
+        </section>
+
+        
+
+
+
+        <section class="footer">
+            <div class="box-container"></div>
+            <div class="creditos">copyright&copy 2023 diseñado por <span>Elevate Inn</span></div>
+        </section>
+
+  </body>
+  </html>
